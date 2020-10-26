@@ -38,7 +38,7 @@ $(MODULE): matrix.cpp
 
 .PHONY: test
 test: $(MODULE)
-	$(PYTEST) test_matrix.py
+	$(PYTEST) -v -l
 
 .PHONY: clean
 clean:
