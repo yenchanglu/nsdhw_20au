@@ -13,7 +13,7 @@ class test_matrix(unittest.TestCase):
         timer_tile = []
         timer_mkl = []
 
-        mat_ans = np.matmul(mat1, mat2)
+'''        mat_ans = np.matmul(mat1, mat2)
 
         for i in range(5):
             timer = time.time()
@@ -41,6 +41,6 @@ class test_matrix(unittest.TestCase):
             f.write("The tiling version is {:.1%} faster than naive version\n".format(timer_naive / timer_tile))
             f.write("The mkl version is {:.1%} faster than naive version\n".format(timer_naive / timer_mkl))
             f.close()
-
+'''
 if __name__ == "__main__":
     unittest.main()
