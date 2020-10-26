@@ -4,7 +4,7 @@ import numpy as np
 import math
 from _matrix import Matrix, multiply_naive, multiply_tile, multiply_mkl
 
-class test_matrix(unittest.TestCace):
+class test_matrix(unittest.TestCase):
     def exec_time(self):
         mat1 = Matrix(np.random.random((1151, 1151)))
         mat2 = Matrix(np.random.random((1151, 1151)))
