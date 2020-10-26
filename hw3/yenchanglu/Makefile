@@ -33,8 +33,6 @@ PYTEST = pytest
 SUFFIX = $(shell python3-config --extension-suffix)
 MODULE = _matrix$(SUFFIX)
 
-all: $(MODULE)
-
 $(MODULE): matrix.cpp
 	$(CXX) $(CXXFLAGS) `$(PY) -m pybind11 --includes` $< -o $@
 
