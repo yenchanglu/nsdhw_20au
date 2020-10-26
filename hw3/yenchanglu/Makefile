@@ -36,10 +36,10 @@ MODULE = _matrix$(SUFFIX)
 $(MODULE): matrix.cpp
 	$(CXX) $(CXXFLAGS) `$(PY) -m pybind11 --includes` $< -o $@
 
-.PHONY: test
-test: $(MODULE)
-	$(PY) -m py.test -v -l
-
 .PHONY: clean
 clean:
 	rm -rf *.so __pycache__ .pytest_cache performance.txt
+
+.PHONY: test
+test: $(MODULE)
+	$(PY) -m py.test -v -l
