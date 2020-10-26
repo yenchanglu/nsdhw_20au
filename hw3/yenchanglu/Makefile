@@ -36,10 +36,10 @@ MODULE = _matrix$(SUFFIX)
 all: $(MODULE)
 
 $(MODULE): matrix.cpp
-	$(CXX) $(CXXFLAGS) `$(PY) -m pybind11 --includes` $^ -o $@
+	$(CXX) $(CXXFLAGS) `$(PY) -m pybind11 --includes` $< -o $@
 
 .PHONY: test
-test: $(MODULE).*.so
+test: $(MODULE).so
 	$(PYTEST) matrix_test.py
 
 .PHONY: clean
