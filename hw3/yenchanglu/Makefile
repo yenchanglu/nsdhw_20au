@@ -37,8 +37,8 @@ $(MODULE): matrix.cpp
 	$(CXX) $(CXXFLAGS) `$(PY) -m pybind11 --includes` $< -o $@
 
 .PHONY: test
-test: $(MODULE).so
-	$(PYTEST) matrix_test.py
+test: $(MODULE)
+	$(PYTEST) test_matrix.py
 
 .PHONY: clean
 clean:
